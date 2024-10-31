@@ -8,6 +8,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 2000
   },
   server: {
-    open: true
-  }  
+    port: parseInt(process.env.PORT) || 3000,
+    host: '0.0.0.0', // Esto permite que la app sea accesible desde fuera de localhost
+  }, 
 })
